@@ -21,6 +21,214 @@ $Black : hsl(0, 0%, 0%); //(with 75% opacity for lightbox background)
 body {
     font-size: 16px;
     font-family: 'Kumbh Sans', sans-serif;
+    min-height: 100vh;
+    nav, main, footer {
+        max-width: 900px;
+        min-width: 800px;
+        border: 1px solid black;
+    }
+    display: flex;
+    // padding-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border:none;
+        border-bottom: 1px solid $Grayish-blue;
+        // justify-content: space-between;
+        padding-top: 20px;
+        &>img {
+            display: none;
+        }
+        .brand--name {
+            margin-right: 50px;
+            // align-self: center;
+            color: $Very-dark-blue;
+        }
+        ul {
+            display: flex;
+            flex-direction: row;
+            gap: 25px;
+            padding-top: 40px;
+            a {
+                text-decoration: none;
+                color: $Dark-grayish-blue;
+                padding: 0 10px;
+                border-bottom: 2px solid transparent;
+                padding-bottom: 40px;
+                &:hover {
+                    border-bottom: 2px solid $Orange;
+                    li {
+                        color: $Very-dark-blue;
+                    }
+                }
+                li {
+                    list-style: none;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+        .cart--container {
+            display: flex;
+            flex-direction: row;
+            margin-left: auto;
+            p {
+                position: relative;
+                height: fit-content;
+                display: flex;
+                right: 10px;
+                top: -2px;
+                font-size: 0.6rem;
+                background-color: $Orange;
+                color: $White;
+                padding: 0px 4px;
+                border-radius: 3px;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .profile {
+            margin-left: 25px;
+            img{
+                height: 50px;
+                border-radius: 50%;
+                border: 2px solid transparent;
+                &:hover {
+                    border-color: $Orange;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    main {
+        margin-top: 30px;
+        padding: 25px 40px;
+        border: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        .preview {
+            grid-column:1/2;
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: repeat(5, 100px);
+            .preview--container {
+                grid-column: 1/-1;
+                grid-row: 1/5;
+            }
+            & * {
+                width: 100%;
+            }
+            & div {
+                padding: 10px;
+                img {
+                    border-radius: 10px;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+            .thumbnail1, .thumbnail2, .thumbnail3, .thumbnail4 {
+                img:hover {
+                    background: $Black;
+                    opacity: 0.5;
+                    border: 4px solid;
+                    border-color: rgba($Orange, 1);
+                    background-position: 1px 1px 1px 1px;
+                }
+            }
+        }
+        .content {
+            grid-column: 2/3;
+            padding-top: 50px;
+            .product--company {
+                margin-top: 10px;
+                color: $Orange;
+                font-weight: 700;
+                font-size: 0.8rem;
+            }
+            .product--name {
+                margin: 20px 0;
+                color: $Very-dark-blue;
+            }
+            .product--desc {
+                margin: 20px 0;
+                line-height: 1.5rem;
+                color: $Dark-grayish-blue;
+                font-size: 0.9rem;
+            }
+            .price {
+                color: $Very-dark-blue;
+            }
+            .change, .price {
+                display: inline-block;
+            }
+            .cost {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 10px;
+            }
+            .change {
+                padding: 3px;
+                color: $Orange;
+                background-color: $Pale-orange;
+                font-size: 0.7rem;
+                font-weight: 700;
+                border-radius: 3px;
+            }
+            .changed--price {
+                text-decoration: line-through;
+                font-size: 0.7rem;
+                color: $Grayish-blue;
+            }
+            .controls {
+                display: flex;
+                flex-direction: row;
+                margin-top: 20px;
+                gap: 20px;
+                .cart--control{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 25px;
+                    padding: 10px;
+                    background: $Light-grayish-blue;
+                    border-radius: 10px;
+                    
+                    button {
+                        display: flex;
+                        background: transparent;
+                        border: none;
+                        padding: 5px;
+                        p {
+                            font-family: 'Kumbh Sans', sans-serif;
+                            font-weight: bolder;
+                            color: $Very-dark-blue;
+                        }
+                    }
+                }
+                .add--to--cart {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 5px;
+                    img {
+                        width: 17px;
+                    }
+                    border: none;
+                    background-color: $Orange;
+                    color: $White;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
 }
 
 
