@@ -178,7 +178,7 @@ body main .content .changed--price {
 body main .content .controls {
   display: flex;
   flex-direction: row;
-  margin-top: 20px;
+  margin-top: 25px;
   gap: 20px;
 }
 body main .content .controls .cart--control {
@@ -186,7 +186,7 @@ body main .content .controls .cart--control {
   flex-direction: row;
   align-items: center;
   gap: 25px;
-  padding: 10px;
+  padding: 10px 20px;
   background: hsl(223deg, 64%, 98%);
   border-radius: 10px;
 }
@@ -212,8 +212,11 @@ body main .content .controls .add--to--cart {
   color: hsl(0deg, 0%, 100%);
   border-radius: 10px;
 }
-body main .content .controls .add--to--cart img {
-  width: 17px;
+body main .content .controls .add--to--cart svg {
+  transform: scale(0.75);
+}
+body main .content .controls .add--to--cart svg path {
+  fill: white;
 }
 
 .attribution {

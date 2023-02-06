@@ -189,14 +189,14 @@ body {
             .controls {
                 display: flex;
                 flex-direction: row;
-                margin-top: 20px;
+                margin-top: 25px;
                 gap: 20px;
                 .cart--control{
                     display: flex;
                     flex-direction: row;
                     align-items: center;
                     gap: 25px;
-                    padding: 10px;
+                    padding: 10px 20px;
                     background: $Light-grayish-blue;
                     border-radius: 10px;
                     
@@ -218,8 +218,11 @@ body {
                     align-items: center;
                     justify-content: center;
                     gap: 5px;
-                    img {
-                        width: 17px;
+                    svg {
+                        transform: scale(0.75);
+                        path{
+                            fill: white;
+                        }
                     }
                     border: none;
                     background-color: $Orange;
