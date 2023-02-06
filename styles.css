@@ -196,7 +196,7 @@ body main .content .controls .cart--control button {
   border: none;
   padding: 5px;
 }
-body main .content .controls .cart--control button p {
+body main .content .controls .cart--control p {
   font-family: "Kumbh Sans", sans-serif;
   font-weight: bolder;
   color: hsl(220deg, 13%, 13%);
