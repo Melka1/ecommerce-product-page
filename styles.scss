@@ -1,0 +1,32 @@
+$Orange: hsl(26, 100%, 55%);
+$Pale-orange: hsl(25, 100%, 94%);
+$Very-dark-blue: hsl(220, 13%, 13%);
+$Dark-grayish-blue: hsl(219, 9%, 45%);
+$Grayish-blue: hsl(220, 14%, 75%);
+$Light-grayish-blue: hsl(223, 64%, 98%);
+$White: hsl(0, 0%, 100%);
+$Black : hsl(0, 0%, 0%); //(with 75% opacity for lightbox background)
+
+@font-face {
+    font-family: "KumbhSans";
+    src: url("./fonts/KumbhSans-VariableFont_wght.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+    a {
+         color: hsl(228, 45%, 44%); 
+    }
+}
