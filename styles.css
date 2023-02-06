@@ -218,6 +218,9 @@ body main .content .controls .add--to--cart svg {
 body main .content .controls .add--to--cart svg path {
   fill: white;
 }
+body main .content .controls .add--to--cart:hover {
+  background-color: rgba(255, 125, 26, 0.7);
+}
 
 .attribution {
   font-size: 11px;

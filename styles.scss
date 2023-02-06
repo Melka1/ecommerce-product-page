@@ -218,16 +218,19 @@ body {
                     align-items: center;
                     justify-content: center;
                     gap: 5px;
+                    border: none;
+                    background-color: $Orange;
+                    color: $White;
+                    border-radius: 10px;
                     svg {
                         transform: scale(0.75);
                         path{
                             fill: white;
                         }
                     }
-                    border: none;
-                    background-color: $Orange;
-                    color: $White;
-                    border-radius: 10px;
+                    &:hover {
+                        background-color: rgba($Orange, 0.7);
+                    }
                 }
             }
         }
