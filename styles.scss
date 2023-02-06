@@ -76,9 +76,10 @@ body {
             flex-direction: row;
             margin-left: auto;
             p {
+
                 position: relative;
                 height: fit-content;
-                display: flex;
+                display: none;
                 right: 10px;
                 top: -2px;
                 font-size: 0.6rem;
