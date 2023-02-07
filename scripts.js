@@ -12,6 +12,10 @@ function updateCartAmount(){
 function togglePreview(id, type){
     image = id
     $(`${type} .preview--container img`).attr("src", `./images/image-product-${id}.jpg`);
+    $(`${type} .prev div`).css("border", "none")
+    $(`${type} .prev div img`).css("opacity", "1")
+    $(`${type} .thumbnail${parseInt(id)} div`).css("border", "2px solid hsl(26, 100%, 55%)")
+    $(`${type} .thumbnail${parseInt(id)} div img`).css("opacity", "0.5")
 }
 
 function add(){
@@ -88,17 +92,25 @@ function openPreview() {
         <div class="preview--container">
           <img src="./images/image-product-${image}.jpg" alt="">
         </div>
-        <div class="thumbnail1">
-          <img  onclick="togglePreview('1', 'aside')" src="./images/image-product-1-thumbnail.jpg" alt="">
+        <div class="thumbnail1 prev">
+            <div>
+                <img  onclick="togglePreview('1', 'aside')" src="./images/image-product-1-thumbnail.jpg" alt="">
+            </div>
         </div>
-        <div class="thumbnail2">
-          <img  onclick="togglePreview('2', 'aside')" src="./images/image-product-2-thumbnail.jpg" alt="">
+        <div class="thumbnail2 prev">
+            <div>
+                <img  onclick="togglePreview('2', 'aside')" src="./images/image-product-2-thumbnail.jpg" alt="">
+            </div>
         </div>
-        <div class="thumbnail3">
-          <img  onclick="togglePreview('3', 'aside')" src="./images/image-product-3-thumbnail.jpg" alt="">
+        <div class="thumbnail3 prev">
+            <div>
+                <img  onclick="togglePreview('3', 'aside')" src="./images/image-product-3-thumbnail.jpg" alt="">
+            </div>
         </div>
-        <div class="thumbnail4">
-          <img  onclick="togglePreview('4', 'aside')" src="./images/image-product-4-thumbnail.jpg" alt="">
+        <div class="thumbnail4 prev">
+            <div>
+                <img  onclick="togglePreview('4', 'aside')" src="./images/image-product-4-thumbnail.jpg" alt="">
+            </div>
         </div>
       </div>
     </div>
