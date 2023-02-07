@@ -168,22 +168,21 @@ body main .preview .preview--container {
 }
 body main .preview * {
   width: 100%;
+  border-radius: 10px;
 }
 body main .preview > div {
   padding: 10px;
 }
-body main .preview > div img {
+body main .preview .thumbnail1, body main .preview .thumbnail2, body main .preview .thumbnail3, body main .preview .thumbnail4 {
+  border-radius: 12px;
+}
+body main .preview .thumbnail1 div, body main .preview .thumbnail2 div, body main .preview .thumbnail3 div, body main .preview .thumbnail4 div {
+  height: 70px;
+  border-radius: 12px;
+}
+body main .preview .thumbnail1 div:hover img, body main .preview .thumbnail2 div:hover img, body main .preview .thumbnail3 div:hover img, body main .preview .thumbnail4 div:hover img {
+  opacity: 0.5 !important;
   border-radius: 10px;
-}
-body main .preview > div img:hover {
-  cursor: pointer;
-}
-body main .preview .thumbnail1 img:hover, body main .preview .thumbnail2 img:hover, body main .preview .thumbnail3 img:hover, body main .preview .thumbnail4 img:hover {
-  background: hsl(0deg, 0%, 0%);
-  opacity: 0.5;
-  border: 4px solid;
-  border-color: #ff7d1a;
-  background-position: 1px 1px 1px 1px;
 }
 body main .content {
   grid-column: 2/3;
@@ -345,5 +344,5 @@ aside .product--preview .preview .thumbnail1 div, aside .product--preview .previ
   background: white;
 }
 aside .product--preview .preview .thumbnail1 div:hover img, aside .product--preview .preview .thumbnail2 div:hover img, aside .product--preview .preview .thumbnail3 div:hover img, aside .product--preview .preview .thumbnail4 div:hover img {
-  opacity: 0.5;
+  opacity: 0.5 !important;
 }/*# sourceMappingURL=styles.css.map */

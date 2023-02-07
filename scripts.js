@@ -12,8 +12,8 @@ function updateCartAmount(){
 function togglePreview(id, type){
     image = id
     $(`${type} .preview--container img`).attr("src", `./images/image-product-${id}.jpg`);
-    $(`${type} .prev div`).css("border", "none")
-    $(`${type} .prev div img`).css("opacity", "1")
+    $(`${type} .prev div`).css("border", "initial")
+    $(`${type} .prev div img`).css("opacity", "initial")
     $(`${type} .thumbnail${parseInt(id)} div`).css("border", "2px solid hsl(26, 100%, 55%)")
     $(`${type} .thumbnail${parseInt(id)} div img`).css("opacity", "0.5")
 }
