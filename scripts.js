@@ -73,3 +73,36 @@ function handleDelete(id){
     updateCartAmount()
     toggleCart()
 }
+
+function openPreview() {
+    $("body").append(`
+    <aside>
+    <div class="product--preview">
+      <div class="background"></div>
+      <div class="preview">
+        <div class="img--close">
+          <img src="./images/icon-close.svg" alt=""  onclick="closePreview()">
+        </div>
+        <div class="preview--container">
+          <img src="./images/image-product-1.jpg" alt="">
+        </div>
+        <div class="thumbnail1">
+          <img  onclick="togglePreview('1')" src="./images/image-product-1-thumbnail.jpg" alt="">
+        </div>
+        <div class="thumbnail2">
+          <img  onclick="togglePreview('2')" src="./images/image-product-2-thumbnail.jpg" alt="">
+        </div>
+        <div class="thumbnail3">
+          <img  onclick="togglePreview('3')" src="./images/image-product-3-thumbnail.jpg" alt="">
+        </div>
+        <div class="thumbnail4">
+          <img  onclick="togglePreview('4')" src="./images/image-product-4-thumbnail.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </aside>`)
+}
+
+function closePreview(){
+    $("aside").remove()
+}

@@ -185,7 +185,7 @@ body {
             & * {
                 width: 100%;
             }
-            & div {
+            & >div {
                 padding: 10px;
                 img {
                     border-radius: 10px;
@@ -203,6 +203,7 @@ body {
                     background-position: 1px 1px 1px 1px;
                 }
             }
+            
         }
         .content {
             grid-column: 2/3;
@@ -305,5 +306,69 @@ body {
     font-size: 11px; text-align: center; 
     a {
          color: hsl(228, 45%, 44%); 
+    }
+}
+aside {
+    .product--preview, .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+    .product--preview {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .background {
+            background-color: black;
+            opacity: 0.75;
+            z-index: 1;
+        }
+        .preview {
+            z-index: 1;
+            grid-column:1/2;
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: 20px 100px 100px 100px 100px 100px;
+            .preview--container {
+                grid-column: 1/-1;
+                grid-row: 2/6;
+            }
+            & * {
+                width: 100%;
+            }
+            & >div {
+                padding: 10px;
+                img {
+                    border-radius: 10px;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+            .img--close {
+                grid-column: 1/-1;
+                width: 100%;
+                display: flex;
+                padding: 0 10px;
+                // align-items: flex-end;
+                justify-content: right;
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            .thumbnail1, .thumbnail2, .thumbnail3, .thumbnail4 {
+                img:hover {
+                    background: $Black;
+                    opacity: 0.5;
+                    border: 4px solid;
+                    border-color: rgba($Orange, 1);
+                    background-position: 1px 1px 1px 1px;
+                }
+            }
+            
+        }
     }
 }

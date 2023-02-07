@@ -169,13 +169,13 @@ body main .preview .preview--container {
 body main .preview * {
   width: 100%;
 }
-body main .preview div {
+body main .preview > div {
   padding: 10px;
 }
-body main .preview div img {
+body main .preview > div img {
   border-radius: 10px;
 }
-body main .preview div img:hover {
+body main .preview > div img:hover {
   cursor: pointer;
 }
 body main .preview .thumbnail1 img:hover, body main .preview .thumbnail2 img:hover, body main .preview .thumbnail3 img:hover, body main .preview .thumbnail4 img:hover {
@@ -283,4 +283,63 @@ body main .content .controls .add--to--cart:hover {
 }
 .attribution a {
   color: hsl(228deg, 45%, 44%);
+}
+
+aside .product--preview, aside .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+aside .product--preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+aside .product--preview .background {
+  background-color: black;
+  opacity: 0.75;
+  z-index: 1;
+}
+aside .product--preview .preview {
+  z-index: 1;
+  grid-column: 1/2;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: 20px 100px 100px 100px 100px 100px;
+}
+aside .product--preview .preview .preview--container {
+  grid-column: 1/-1;
+  grid-row: 2/6;
+}
+aside .product--preview .preview * {
+  width: 100%;
+}
+aside .product--preview .preview > div {
+  padding: 10px;
+}
+aside .product--preview .preview > div img {
+  border-radius: 10px;
+}
+aside .product--preview .preview > div img:hover {
+  cursor: pointer;
+}
+aside .product--preview .preview .img--close {
+  grid-column: 1/-1;
+  width: 100%;
+  display: flex;
+  padding: 0 10px;
+  justify-content: right;
+}
+aside .product--preview .preview .img--close img {
+  width: 20px;
+  height: 20px;
+}
+aside .product--preview .preview .thumbnail1 img:hover, aside .product--preview .preview .thumbnail2 img:hover, aside .product--preview .preview .thumbnail3 img:hover, aside .product--preview .preview .thumbnail4 img:hover {
+  background: hsl(0deg, 0%, 0%);
+  opacity: 0.5;
+  border: 4px solid;
+  border-color: #ff7d1a;
+  background-position: 1px 1px 1px 1px;
 }/*# sourceMappingURL=styles.css.map */
