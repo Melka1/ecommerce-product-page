@@ -12,10 +12,13 @@ $Black : hsl(0, 0%, 0%); //(with 75% opacity for lightbox background)
     src: url("./fonts/KumbhSans-VariableFont_wght.ttf");
 }
 
+$font : "KumbhSans", sans-serif;
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
 }
 
 body {
@@ -23,9 +26,9 @@ body {
     font-family: 'Kumbh Sans', sans-serif;
     min-height: 100vh;
     nav, main, footer {
-        max-width: 900px;
-        min-width: 800px;
-        border: 1px solid black;
+        width: 900px;
+        // min-width: 800px;
+        // border: 1px solid black;
     }
     display: flex;
     // padding-top: 50px;
@@ -51,7 +54,7 @@ body {
         ul {
             display: flex;
             flex-direction: row;
-            gap: 25px;
+            gap: 20px;
             padding-top: 40px;
             a {
                 text-decoration: none;
@@ -75,13 +78,14 @@ body {
             display: flex;
             flex-direction: row;
             margin-left: auto;
-            p {
+            position: relative;
+            & > p {
 
-                position: relative;
+                position: absolute;
                 height: fit-content;
                 display: none;
-                right: 10px;
-                top: -2px;
+                right: -7px;
+                top: -3px;
                 font-size: 0.6rem;
                 background-color: $Orange;
                 color: $White;
@@ -90,6 +94,62 @@ body {
             }
             &:hover {
                 cursor: pointer;
+            }
+            .cart--preview {
+                position: absolute;
+                width: 275px;
+                top: 40px;
+                left: -115px;
+                background: $White;
+                box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.05);
+                border-radius: 10px;
+                h3 {
+                    font-size: 0.8rem;
+                    padding: 15px;
+                    font-weight: bold;
+                }
+                hr {
+                    // margin-top: 10px;
+                    border-color: rgba( $Light-grayish-blue , 0.25);
+                }
+                .items {
+                    padding: 15px;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                    align-items: center;
+                    .item--image {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 5px;
+                    }
+
+                    .item--desc {
+                        display: flex;
+                        flex-direction:column ;
+                        gap: 5px;
+                        font-size: 0.7rem;
+                        strong {
+                            font-weight: 900;
+                        }
+                    }
+                }
+                .no--cart {
+                    padding: 40px;
+                    text-align: center;
+                    font-size: 0.8rem;
+                    color: $Dark-grayish-blue;
+                    font-weight: bolder;
+                }
+                &>button {
+                    width: -webkit-fill-available;
+                    margin: 15px;
+                    padding: 10px;
+                    border-radius: 10px;
+                    border: none;
+                    background: $Orange;
+                    color: white;
+                }
             }
         }
         .profile {
@@ -106,8 +166,9 @@ body {
         }
     }
     main {
-        margin-top: 30px;
-        padding: 25px 40px;
+        margin-top: 20px;
+        padding: 15px 40px;
+        padding-bottom: 5px;
         border: none;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -115,8 +176,8 @@ body {
         .preview {
             grid-column:1/2;
             display: grid;
-            grid-template-columns: repeat(4, 100px);
-            grid-template-rows: repeat(5, 100px);
+            grid-template-columns: repeat(4, 90px);
+            grid-template-rows: repeat(5, 90px);
             .preview--container {
                 grid-column: 1/-1;
                 grid-row: 1/5;
@@ -232,6 +293,7 @@ body {
                     &:hover {
                         background-color: rgba($Orange, 0.7);
                     }
+
                 }
             }
         }
