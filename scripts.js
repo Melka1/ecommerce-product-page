@@ -1,4 +1,5 @@
 let cart = []
+let image = 1
 
 function updateCartAmount(){
     let totCart = cart.reduce((a, b) => a + b.cartAmount, 0)
@@ -8,8 +9,9 @@ function updateCartAmount(){
     if(totCart==0)$(".cart--list").css("display","none")
 }
 
-function togglePreview(id){
-    $(".preview--container img").attr("src", `./images/image-product-${id}.jpg`);
+function togglePreview(id, type){
+    image = id
+    $(`${type} .preview--container img`).attr("src", `./images/image-product-${id}.jpg`);
 }
 
 function add(){
@@ -84,19 +86,19 @@ function openPreview() {
           <img src="./images/icon-close.svg" alt=""  onclick="closePreview()">
         </div>
         <div class="preview--container">
-          <img src="./images/image-product-1.jpg" alt="">
+          <img src="./images/image-product-${image}.jpg" alt="">
         </div>
         <div class="thumbnail1">
-          <img  onclick="togglePreview('1')" src="./images/image-product-1-thumbnail.jpg" alt="">
+          <img  onclick="togglePreview('1', 'aside')" src="./images/image-product-1-thumbnail.jpg" alt="">
         </div>
         <div class="thumbnail2">
-          <img  onclick="togglePreview('2')" src="./images/image-product-2-thumbnail.jpg" alt="">
+          <img  onclick="togglePreview('2', 'aside')" src="./images/image-product-2-thumbnail.jpg" alt="">
         </div>
         <div class="thumbnail3">
-          <img  onclick="togglePreview('3')" src="./images/image-product-3-thumbnail.jpg" alt="">
+          <img  onclick="togglePreview('3', 'aside')" src="./images/image-product-3-thumbnail.jpg" alt="">
         </div>
         <div class="thumbnail4">
-          <img  onclick="togglePreview('4')" src="./images/image-product-4-thumbnail.jpg" alt="">
+          <img  onclick="togglePreview('4', 'aside')" src="./images/image-product-4-thumbnail.jpg" alt="">
         </div>
       </div>
     </div>
