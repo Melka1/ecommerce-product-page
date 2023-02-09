@@ -94,6 +94,11 @@ body {
             }
             &:hover {
                 cursor: pointer;
+                svg {
+                    path {
+                        fill: black !important;;
+                    }
+                }
             }
             .cart--preview {
                 position: absolute;
@@ -194,7 +199,6 @@ body {
                 div {
                     height: 70px;
                     border-radius: 12px;
-                    // background-color: $Black;
                 }
                 div:hover {
                     img {
@@ -268,6 +272,12 @@ body {
                         background: transparent;
                         border: none;
                         padding: 5px;
+                        &:hover{
+                            cursor: pointer;
+                            svg{
+                                opacity: 0.6;
+                            }
+                        }
                     }
                     p {
                         font-family: 'Kumbh Sans', sans-serif;
@@ -287,14 +297,13 @@ body {
                     border-radius: 10px;
                     svg {
                         transform: scale(0.75);
-                        path{
+                        path {
                             fill: white;
                         }
                     }
                     &:hover {
                         background-color: rgba($Orange, 0.7);
                     }
-
                 }
             }
         }
@@ -334,6 +343,34 @@ aside {
             .preview--container {
                 grid-column: 1/-1;
                 grid-row: 2/6;
+                position: relative;
+                button {
+                    position: absolute;
+                    top: 45%;
+                    width: 35px;
+                    height:35px;
+                    border-radius: 50%;
+                    border: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    svg{
+                        width: fit-content;
+                        transform: scale(0.75);
+                    }
+                    &:hover {
+                        cursor: pointer;
+                        path {
+                            stroke: $Orange !important;
+                        }
+                    }
+                }
+                .prev {
+                    left:-7px;
+                }
+                .next {
+                    right: -7px;
+                }
             }
             & * {
                 width: 100%;
@@ -349,13 +386,17 @@ aside {
             }
             .img--close {
                 grid-column: 1/-1;
-                width: 100%;
+                width: auto;
                 display: flex;
                 padding: 0 10px;
-                justify-content: right;
-                img {
-                    width: 20px;
-                    height: 20px;
+                justify-self: right;
+                &:hover {
+                    svg {
+                        cursor: pointer;
+                        path{
+                            fill: rgb(255, 198, 85) !important;
+                        }
+                    }
                 }
             }
 
@@ -372,7 +413,6 @@ aside {
                     }
                 }
             }
-            
         }
     }
 }

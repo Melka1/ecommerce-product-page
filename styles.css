@@ -81,6 +81,9 @@ body nav .cart--container > p {
 body nav .cart--container:hover {
   cursor: pointer;
 }
+body nav .cart--container:hover svg path {
+  fill: black !important;
+}
 body nav .cart--container .cart--preview {
   position: absolute;
   width: 275px;
@@ -250,6 +253,12 @@ body main .content .controls .cart--control button {
   border: none;
   padding: 5px;
 }
+body main .content .controls .cart--control button:hover {
+  cursor: pointer;
+}
+body main .content .controls .cart--control button:hover svg {
+  opacity: 0.6;
+}
 body main .content .controls .cart--control p {
   font-family: "Kumbh Sans", sans-serif;
   font-weight: bolder;
@@ -311,6 +320,36 @@ aside .product--preview .preview {
 aside .product--preview .preview .preview--container {
   grid-column: 1/-1;
   grid-row: 2/6;
+  position: relative;
+}
+aside .product--preview .preview .preview--container button {
+  position: absolute;
+  top: 45%;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+aside .product--preview .preview .preview--container button svg {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  transform: scale(0.75);
+}
+aside .product--preview .preview .preview--container button:hover {
+  cursor: pointer;
+}
+aside .product--preview .preview .preview--container button:hover path {
+  stroke: hsl(26deg, 100%, 55%) !important;
+}
+aside .product--preview .preview .preview--container .prev {
+  left: -7px;
+}
+aside .product--preview .preview .preview--container .next {
+  right: -7px;
 }
 aside .product--preview .preview * {
   width: 100%;
@@ -326,14 +365,16 @@ aside .product--preview .preview > div img:hover {
 }
 aside .product--preview .preview .img--close {
   grid-column: 1/-1;
-  width: 100%;
+  width: auto;
   display: flex;
   padding: 0 10px;
-  justify-content: right;
+  justify-self: right;
 }
-aside .product--preview .preview .img--close img {
-  width: 20px;
-  height: 20px;
+aside .product--preview .preview .img--close:hover svg {
+  cursor: pointer;
+}
+aside .product--preview .preview .img--close:hover svg path {
+  fill: rgb(255, 198, 85) !important;
 }
 aside .product--preview .preview .thumbnail1, aside .product--preview .preview .thumbnail2, aside .product--preview .preview .thumbnail3, aside .product--preview .preview .thumbnail4 {
   padding: 10px;
