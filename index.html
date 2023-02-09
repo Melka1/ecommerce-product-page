@@ -11,7 +11,7 @@
 </head>
 <body>
   <nav>
-    <img src="./images/icon-menu.svg" alt="icon-menu">
+    <img src="./images/icon-menu.svg" alt="icon-menu" class="menu--icon">
     <h1 class="brand--name">sneakers</h1>
     <ul class="menu--list">
       <a href="#"><li>Collections</li></a>
@@ -32,7 +32,13 @@
   <main>
     <div class="preview">
       <div class="preview--container">
+        <button class="prev" onclick="handlePrev('main')">
+          <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+          </button>
         <img src="./images/image-product-1.jpg" alt="" onclick="openPreview()">
+        <button class="next" onclick="handleNext('main')">
+          <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+          </button>
       </div>
       <div class="thumbnail1 prev">
         <div>
@@ -63,8 +69,8 @@
       <div class="cost">
         <h2 class="price">$125.00</h2>
         <h3 class="change">50%</h3>
+        <p class="changed--price">$250.00</p>
       </div>
-      <p class="changed--price">$250.00</p>
       <div class="controls">
         <div class="cart--control">
           <button onclick="minus()">
