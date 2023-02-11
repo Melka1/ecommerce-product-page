@@ -437,7 +437,7 @@ aside {
     }
 }
 
-@media screen and (width<=375px) {
+@media screen and (width<=500px) {
     body {
         padding-bottom: 20px;
         nav,main,footer {
@@ -595,7 +595,7 @@ aside {
         }
     }
 }
-@media screen and (width>375px) {
+@media screen and (width>500px) {
     body nav ul {
         display: flex !important;
     }

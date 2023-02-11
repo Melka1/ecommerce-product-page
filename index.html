@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | E-commerce product page</title>
   <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -39,30 +38,30 @@
         <button class="prev" onclick="handlePrev('main')">
           <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
           </button>
-        <img class="onclick" src="./images/image-product-1.jpg" alt="" onclick="openPreview()">
-        <img class="noOnclick" src="./images/image-product-1.jpg" alt="">
+        <img class="onclick" src="./images/image-product-1.jpg" alt="preview image" onclick="openPreview()">
+        <img class="noOnclick" src="./images/image-product-1.jpg" alt="preview image">
         <button class="next" onclick="handleNext('main')">
           <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
           </button>
       </div>
       <div class="thumbnail1 prev">
         <div>
-            <img  onclick="togglePreview('1', 'main')" src="./images/image-product-1-thumbnail.jpg" alt="">
+            <img  onclick="togglePreview('1', 'main')" src="./images/image-product-1-thumbnail.jpg" alt="product thumbnail1">
         </div>
       </div>
       <div class="thumbnail2 prev">
         <div>
-          <img  onclick="togglePreview('2', 'main')" src="./images/image-product-2-thumbnail.jpg" alt="">
+          <img  onclick="togglePreview('2', 'main')" src="./images/image-product-2-thumbnail.jpg" alt="product thumbnail2">
         </div>
       </div>
       <div class="thumbnail3 prev">
         <div>
-          <img  onclick="togglePreview('3', 'main')" src="./images/image-product-3-thumbnail.jpg" alt="">
+          <img  onclick="togglePreview('3', 'main')" src="./images/image-product-3-thumbnail.jpg" alt="product thumbnail3">
         </div>
       </div>
       <div class="thumbnail4 prev">
         <div>
-          <img  onclick="togglePreview('4', 'main')" src="./images/image-product-4-thumbnail.jpg" alt="">
+          <img  onclick="togglePreview('4', 'main')" src="./images/image-product-4-thumbnail.jpg" alt="product thumbnail4">
         </div>
       </div>
     </div>

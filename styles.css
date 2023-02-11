@@ -408,7 +408,7 @@ aside .product--preview .preview .thumbnail1 div:hover img, aside .product--prev
   opacity: 0.5 !important;
 }
 
-@media screen and (width <= 375px) {
+@media screen and (width <= 500px) {
   body {
     padding-bottom: 20px;
   }
@@ -561,7 +561,7 @@ aside .product--preview .preview .thumbnail1 div:hover img, aside .product--prev
     padding: 10px;
   }
 }
-@media screen and (width > 375px) {
+@media screen and (width > 500px) {
   body nav ul {
     display: flex !important;
   }
