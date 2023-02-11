@@ -52,6 +52,9 @@ body {
             color: $Very-dark-blue;
         }
         ul {
+            .menu--close{
+                display: none;
+            }
             display: flex;
             flex-direction: row;
             gap: 20px;
@@ -457,6 +460,7 @@ aside {
                 width:65vw;
                 .menu--close {
                     margin-bottom: 20px;
+                    display: block;
                 }
                 a {
                     padding: 0;
@@ -589,5 +593,10 @@ aside {
                 }
             }
         }
+    }
+}
+@media screen and (width>=375px) {
+    body nav ul {
+        display: flex;
     }
 }
