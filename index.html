@@ -11,9 +11,13 @@
 </head>
 <body>
   <nav>
-    <img src="./images/icon-menu.svg" alt="icon-menu" class="menu--icon">
+    <div class="cover"></div>
+    <img src="./images/icon-menu.svg" alt="icon-menu" class="menu--icon" onclick="showMenu()">
     <h1 class="brand--name">sneakers</h1>
     <ul class="menu--list">
+      <div class="menu--close" onclick="closeMenu()">
+        <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="gray" fill-rule="evenodd"/></svg>
+      </div>
       <a href="#"><li>Collections</li></a>
       <a href="#"><li>Men</li></a>
       <a href="#"><li>Women</li></a>
@@ -35,7 +39,8 @@
         <button class="prev" onclick="handlePrev('main')">
           <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
           </button>
-        <img src="./images/image-product-1.jpg" alt="" onclick="openPreview()">
+        <img class="onclick" src="./images/image-product-1.jpg" alt="" onclick="openPreview()">
+        <img class="noOnclick" src="./images/image-product-1.jpg" alt="">
         <button class="next" onclick="handleNext('main')">
           <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
           </button>

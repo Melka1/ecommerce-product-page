@@ -172,6 +172,12 @@ body main .preview .preview--container {
 body main .preview .preview--container button {
   display: none;
 }
+body main .preview .preview--container .onclick {
+  display: block;
+}
+body main .preview .preview--container .noOnclick {
+  display: none;
+}
 body main .preview * {
   width: 100%;
   border-radius: 10px;
@@ -350,6 +356,12 @@ aside .product--preview .preview .preview--container button:hover {
 aside .product--preview .preview .preview--container button:hover path {
   stroke: hsl(26deg, 100%, 55%) !important;
 }
+aside .product--preview .preview .preview--container .onclick {
+  display: none;
+}
+aside .product--preview .preview .preview--container .noOnclick {
+  display: block;
+}
 aside .product--preview .preview .preview--container .prev {
   left: -7px;
 }
@@ -394,6 +406,9 @@ aside .product--preview .preview .thumbnail1 div:hover img, aside .product--prev
 }
 
 @media screen and (width <= 375px) {
+  body {
+    padding-bottom: 20px;
+  }
   body nav, body main, body footer {
     width: 100%;
   }
@@ -403,6 +418,25 @@ aside .product--preview .preview .thumbnail1 div:hover img, aside .product--prev
   }
   body nav ul {
     display: none;
+    padding-top: 0;
+    padding: 20px;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 3;
+    height: 100vh;
+    width: 65vw;
+  }
+  body nav ul .menu--close {
+    margin-bottom: 20px;
+  }
+  body nav ul a {
+    padding: 0;
+    color: black;
+    font-weight: 800;
+    padding-bottom: 0;
   }
   body nav .profile img {
     height: 25px;
@@ -429,6 +463,17 @@ aside .product--preview .preview .thumbnail1 div:hover img, aside .product--prev
   body nav .menu--icon {
     display: block;
     margin-right: 20px;
+  }
+  body nav .cover {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    background-color: black;
+    opacity: 0.6;
   }
   body main {
     margin: 0;
@@ -469,6 +514,12 @@ aside .product--preview .preview .thumbnail1 div:hover img, aside .product--prev
   }
   body main .preview .preview--container .next {
     right: 5%;
+  }
+  body main .preview .preview--container .onclick {
+    display: none;
+  }
+  body main .preview .preview--container .noOnclick {
+    display: block;
   }
   body main .preview .prev {
     display: none;

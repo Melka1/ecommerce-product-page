@@ -147,3 +147,15 @@ function openPreview() {
 function closePreview(){
     $("aside").remove()
 }
+
+function showMenu(){
+    $(".cover").css("display", "block")
+    $("nav ul").css("display", "flex")
+    $("body").css("overflow", "hidden")
+}
+
+function closeMenu(){
+    $(".cover").css("display", "none")
+    $("nav ul").css("display", "none")
+    $("body").css("overflow", "auto")
+}
