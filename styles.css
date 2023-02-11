@@ -561,8 +561,8 @@ aside .product--preview .preview .thumbnail1 div:hover img, aside .product--prev
     padding: 10px;
   }
 }
-@media screen and (width >= 375px) {
+@media screen and (width > 375px) {
   body nav ul {
-    display: flex;
+    display: flex !important;
   }
 }/*# sourceMappingURL=styles.css.map */

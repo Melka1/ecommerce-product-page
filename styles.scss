@@ -595,8 +595,8 @@ aside {
         }
     }
 }
-@media screen and (width>=375px) {
+@media screen and (width>375px) {
     body nav ul {
-        display: flex;
+        display: flex !important;
     }
 }
